@@ -1,0 +1,8 @@
+https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/
+
+nvm install by nvm install tool
+
+nvm install 12.22.11
+nvm list
+nvm use 12.22.11
+npm run dev

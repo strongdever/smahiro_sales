@@ -1,0 +1,240 @@
+.form-section {
+    padding-top: 5.6rem;
+
+    form {
+        ul {
+            margin: 0 auto;
+            max-width: 56rem;
+
+        }
+
+        .bottom-desc {
+            width: fit-content;
+            margin: 4.0rem auto 0 auto;
+            text-align: left;
+            line-height: 2.8rem;
+        }
+    }
+}
+
+
+.main-form {
+    padding-top: 8.6rem;
+    padding-bottom: 2.4rem;
+
+    .container {
+        max-width: 68rem;
+
+        @include media("sp") {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    .form-label {
+        width: fit-content;
+        display: block;
+        margin: 0 auto 5.2rem auto;
+    }
+
+    .form-wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3.2rem;
+        padding-bottom: 4.8rem;
+
+        @include media("sp") {
+            row-gap: 2.6rem;
+            padding-bottom: 2.4rem;
+        }
+    }
+
+    .vertical-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.6rem;
+    }
+
+    .horizontal-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        column-gap: 1.6rem;
+
+        @include media("sp") {
+            column-gap: 0.8rem;
+        }
+    }
+
+    .input-checkbox {
+        width: fit-content;
+
+        .horizontal-wrapper {
+            column-gap: 0.8rem;
+        }
+
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+
+        input {
+            @include media("sp") {
+                margin-top: 0.4rem;
+                margin-right: 0;
+            }
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+            color: #FFF;
+
+            @include media("sp") {
+                line-height: 2.6rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    label {
+        color: #FFF;
+    }
+
+    input {
+        height: 4.8rem;
+        border-radius: 4px;
+        flex-shrink: 0;
+    }
+
+    .input-button {
+        margin-top: 2.0rem;
+    }
+
+    .checkbox-item {
+        -webkit-row-gap: 2.4rem;
+        -moz-row-gap: 2.4rem;
+        row-gap: 2.4rem;
+    }
+
+    textarea {
+        line-height: 2.4rem;
+    }
+
+    .btn {
+        padding: 2.3rem 6.4rem;
+        height: 6.0rem;
+        width: fit-content;
+        margin-bottom: 4.8rem;
+
+        @include media("sp") {
+            width: 100%;
+            padding: 1.6rem;
+        }
+    }
+
+    .btn-black {
+        &::before {
+            background: #2175D6;
+        }
+
+        &:hover span {
+            color: #FFF;
+        }
+    }
+
+    .btns-wrapper {
+        margin: 4.8rem auto 0 auto;
+    }
+
+    &.main-confirm {
+
+        input,
+        textarea {
+            padding: 0;
+            border: unset;
+            font-weight: 400;
+        }
+
+        .name-wrapper {
+            .horizontal-wrapper {
+                justify-content: flex-start;
+
+                input {
+                    width: 3.4rem;
+                }
+            }
+        }
+    }
+
+    .required {
+        width: fit-content;
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: 0.8rem;
+
+        &::after {
+            width: fit-content;
+            content: '必須';
+            color: #FFF;
+            line-height: 100%;
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: 0.5rem 0.8rem;
+            width: fit-content;
+            height: fit-content;
+            background: $green_color;
+            border-radius: 2px;
+        }
+    }
+}
+
+input[type=checkbox] {
+    position: relative;
+    border-radius: 4px;
+    border: 1.5px solid #FFF;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 2rem !important;
+    width: 2rem !important;
+    -webkit-appearance: none;
+    opacity: .5;
+    margin: 0 0.8rem 0 0;
+}
+
+input[type=checkbox]:hover {
+    opacity: 1;
+}
+
+input[type=checkbox]:checked {
+    background-color: $green_color;
+    border: 1.5px solid $green_color;
+    opacity: 1;
+}
+
+input[type=checkbox]:checked:before {
+    content: '';
+    position: absolute;
+    right: calc(50% + 0rem);
+    top: 50%;
+    width: 0.6rem;
+    height: 1.3rem;
+    border: solid #FFF;
+    border-width: 0 2px 2px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+    z-index: 2;
+}
